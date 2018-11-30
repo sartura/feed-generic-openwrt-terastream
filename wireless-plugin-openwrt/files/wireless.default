@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Warning, problems can occur if the device restarts in the middle of this uci-default script
+
+if [ -x /bin/sysrepoctl ]; then
+	match=$(sysrepoctl -l | grep "router-wireless\ ")
+	if [ ! "$match" ]; then
+		sysrepoctl --install --yang=/etc/sysrepo/yang/router-wireless@2018-11-27.yang -p 600
+	fi
+fi
+
+exit 0
