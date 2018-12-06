@@ -25,7 +25,7 @@ define Package/network-plugin-openwrt
   SECTION:=Sysrepo Plugins
   CATEGORY:=Sysrepo Plugins
   TITLE:=network plugin
-  DEPENDS:= +sysrepo +libuci +sysrepoctl +libubus +libblobmsg-json +libjson-c
+  DEPENDS:= +sysrepo +libuci +sysrepoctl +libubus +libblobmsg-json +libjson-c +ip-full
 endef
 
 define Package/network-plugin-openwrt/description
