@@ -2,11 +2,11 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=network-plugin-openwrt
 PKG_RELEASE:=2018-12-01
-PKG_VERSION:=0.1.1
+PKG_VERSION:=0.1.2
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/sartura/network-plugin-openwrt.git
-PKG_SOURCE_VERSION:=221285908f3291665c94859248aefee7bf16bf4b
+PKG_SOURCE_VERSION:=96654635969ac6e297cbc12e432ef68e1746f050
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.xz
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION)
 
@@ -25,7 +25,7 @@ define Package/network-plugin-openwrt
   SECTION:=Sysrepo Plugins
   CATEGORY:=Sysrepo Plugins
   TITLE:=network plugin
-  DEPENDS:= +sysrepo +libuci +sysrepoctl +libubus +libblobmsg-json +libjson-c +ip-full
+  DEPENDS:= +sysrepo +libuci +sysrepoctl +libubus +libblobmsg-json +libjson-c
 endef
 
 define Package/network-plugin-openwrt/description
